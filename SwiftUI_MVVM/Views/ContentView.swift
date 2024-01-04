@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var productViewModel = ProductViewModel()
-    @State private var selectedColorIndex = 0
+    @State private var selectedIndex = 0
     
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
                     Spacer(minLength: 70)
-                    Picker("Table Type", selection: $selectedColorIndex,
+                    Picker("Table Type", selection: $selectedIndex,
                            content: {
                         Text("Grouped").tag(0)
                         Text("Plain").tag(1)
@@ -29,7 +29,7 @@ struct ContentView: View {
                         List(self.productViewModel.productItems) { productItem in
                             CustomListCell(productModel: productItem)
                         }
-                        . modifier(DeviceAdaptedListStyle(isGrouped:  selectedColorIndex == 0))
+                        . modifier(DeviceAdaptedListStyle(isGrouped:  selectedIndex == 0))
                         .listStyle(.plain)
                         .scrollContentBackground(.hidden)
                         .cornerRadius(2.0)

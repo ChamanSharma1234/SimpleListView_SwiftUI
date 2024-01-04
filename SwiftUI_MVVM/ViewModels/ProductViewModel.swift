@@ -24,7 +24,5 @@ class ProductViewModel: ObservableObject {
         productItems.append(ProductModel(id: 7, productName: "Samsung Galaxy Book", productDescription: "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched", image: "https://i.dummyjson.com/data/products/7/thumbnail.jpg", price: "1499"))
         productItems.append(ProductModel(id: 8, productName: "Microsoft Surface Laptop 4", productDescription: "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.", image: "https://i.dummyjson.com/data/products/8/thumbnail.jpg", price: "1499"))
         productItems.append(ProductModel(id: 9, productName: "Infinix INBOOK", productDescription: "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty", image: "https://i.dummyjson.com/data/products/9/thumbnail.jpg", price: "1099"))
-
      }
-
 }
