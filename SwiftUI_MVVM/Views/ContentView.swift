@@ -29,7 +29,7 @@ struct ContentView: View {
                         List(self.productViewModel.productItems) { productItem in
                             CustomListCell(productModel: productItem)
                         }
-                        . modifier(DeviceAdaptedListStyle(isGrouped:  selectedIndex == 0))
+                        . modifier(DeviceAdaptedListStyle(isGrouped: selectedIndex == 0))
                         .listStyle(.plain)
                         .scrollContentBackground(.hidden)
                         .cornerRadius(2.0)
@@ -85,15 +85,15 @@ struct CustomListCell: View {
 }
 
 struct DeviceAdaptedListStyle: ViewModifier {
-  var isGrouped: Bool = true
-
-  @ViewBuilder func body(content: Content) -> some View {
-    if isGrouped {
-      content.listStyle(.insetGrouped)
-    } else {
-      content.listStyle(.grouped)
+    var isGrouped: Bool = true
+    
+    @ViewBuilder func body(content: Content) -> some View {
+        if isGrouped {
+            content.listStyle(.insetGrouped)
+        } else {
+            content.listStyle(.grouped)
+        }
     }
-  }
 }
 
 
