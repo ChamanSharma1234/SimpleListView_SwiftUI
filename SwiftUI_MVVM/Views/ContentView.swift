@@ -27,7 +27,7 @@ struct ContentView: View {
                     
                     ZStack {
                         List(self.productViewModel.productItems) { productItem in
-                            CustomTableView(productModel: productItem)
+                            CustomListCell(productModel: productItem)
                         }
                         . modifier(DeviceAdaptedListStyle(isGrouped:  selectedColorIndex == 0))
                         .listStyle(.plain)
@@ -44,7 +44,7 @@ struct ContentView: View {
     }
 }
 
-struct CustomTableView: View {
+struct CustomListCell: View {
     let productModel: ProductModel?
     let width: CGFloat = UIScreen.main.bounds.width
     
